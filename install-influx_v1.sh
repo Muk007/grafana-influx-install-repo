@@ -14,7 +14,8 @@ echo "${key} influxdb.key" | sha256sum -c && cat influxdb.key | gpg --dearmor | 
 echo "deb [signed-by=${key_path}] ${influx_debian_url} stable main" | sudo tee /etc/apt/sources.list.d/influxdata.list
 
 sudo apt-get update && sudo apt-get install influxdb
-sudo service influxdb start
+# If you want to install influxdb_v2, replace influxdb (line 16) with influxdb2
 
+sudo service influxdb start
 
 # NOTE: Make sure to enable authentication and create user/paswd in influx which will be used while making influx as data source for the grafana. 
