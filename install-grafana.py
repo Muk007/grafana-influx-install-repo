@@ -5,7 +5,7 @@ import os
 import json
 import logging
 
-logging.basicConfig(filename='/var/log/grafana/grafana-install.log', format='%(asctime)s, %(msecs)d %(name)s %(levelname)s %(message)s', datefmt='%H:%M:%S', level=logging.INFO)
+logging.basicConfig(filename='/var/log/grafana-install.log', format='%(asctime)s, %(msecs)d %(name)s %(levelname)s %(message)s', datefmt='%H:%M:%S', level=logging.INFO)
 
 def load_config (config_file_path):
     config_data = {}
